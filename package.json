@@ -1,7 +1,7 @@
 {
   "name": "cdk-implode",
   "version": "1.54.3",
-  "description": "Implode your AWS CDK Stack after set amount of time, save money, be happy!",
+  "description": "Implode your aws stack",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -21,8 +21,8 @@
     "aws"
   ],
   "author": {
-    "name": "John Belisle",
-    "email": "jmb186@gmail.com",
+    "name": "Oleg Polej",
+    "email": "polejai538@gmail.com",
     "url": "https://github.com/olich538",
     "organization": false
   },

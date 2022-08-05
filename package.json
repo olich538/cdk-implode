@@ -1,0 +1,76 @@
+{
+  "name": "cdk-implode",
+  "version": "1.54.2",
+  "description": "Implode your AWS CDK Stack after set amount of time, save money, be happy!",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "jsii",
+    "build:watch": "jsii -w",
+    "package": "jsii-pacmak",
+    "test": "tsc && jest",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "url": "https://github.com/olich538/cdk-implode.git"
+  },
+  "stability": "experimental",
+  "keywords": [
+    "cdk",
+    "aws-cdk",
+    "aws"
+  ],
+  "author": {
+    "name": "John Belisle",
+    "email": "jmb186@gmail.com",
+    "url": "https://github.com/olich538",
+    "organization": false
+  },
+  "jsii": {
+    "targets": {
+      "python": {
+        "module": "cdk_implode",
+        "distName": "cdk-implode"
+      },
+      "java": {
+        "package": "io.github.olich538",
+        "maven": {
+          "groupId": "io.github.olich538",
+          "artifactId": "cdk-implode"
+        }
+      },
+      "dotnet": {
+        "namespace": "io.github.olich538",
+        "packageId": "cdk-implode"
+      }
+    },
+    "outdir": "dist"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olich538/cdk-implode/issues"
+  },
+  "homepage": "https://github.com/olich538/cdk-implode#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.5",
+    "@types/node": "^14.0.24",
+    "jest": "^26.1.0",
+    "jsii": "^1.9.0",
+    "jsii-pacmak": "^1.9.0",
+    "ts-jest": "^26.1.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-events": "^1.53.0",
+    "@aws-cdk/aws-events-targets": "^1.53.0",
+    "@aws-cdk/aws-iam": "^1.53.0",
+    "@aws-cdk/aws-lambda": "^1.53.0",
+    "@aws-cdk/core": "^1.53.0"
+  },
+  "peerDependencies": {
+    "@aws-cdk/aws-events": "^1.53.0",
+    "@aws-cdk/aws-events-targets": "^1.53.0",
+    "@aws-cdk/aws-iam": "^1.53.0",
+    "@aws-cdk/aws-lambda": "^1.53.0",
+    "@aws-cdk/core": "^1.53.0"
+  }
+}

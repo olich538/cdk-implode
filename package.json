@@ -1,6 +1,6 @@
 {
   "name": "cdk-implode",
-  "version": "1.54.5",
+  "version": "1.54.6",
   "description": "Implode your aws stack",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

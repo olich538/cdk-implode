@@ -1,71 +1,55 @@
 {
-  "name": "cdk-implode",
-  "version": "1.54.6",
-  "description": "Implode your aws stack",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "scripts": {
-    "build": "jsii",
-    "build:watch": "jsii -w",
-    "package": "jsii-pacmak",
-    "test": "tsc && jest",
-    "watch": "tsc -w"
-  },
-  "repository": "https://github.com/olich538/cdk-implode.git",
-  "stability": "experimental",
-  "keywords": [
-    "cdk",
-    "aws-cdk",
-    "aws"
-  ],
-  "author": "Oleg Polej <polejai538@gmail.com> (https://github.com/olich538)",
-  "jsii": {
-    "targets": {
-      "python": {
-        "module": "cdk_implode",
-        "distName": "cdk-implode"
-      },
-      "java": {
-        "package": "io.github.olich538",
-        "maven": {
-          "groupId": "io.github.olich538",
-          "artifactId": "cdk-implode"
-        }
-      },
-      "dotnet": {
-        "namespace": "io.github.olich538",
-        "packageId": "cdk-implode"
-      }
-    },
-    "outdir": "dist"
-  },
+  "version": "0.1.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olich538/cdk-implode/issues"
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
   },
-  "homepage": "https://github.com/olich538/cdk-implode#readme",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "my-lib-to-publish",
+  "author": "Oleg Po",
+  "module": "dist/my-lib-to-publish.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/my-lib-to-publish.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/my-lib-to-publish.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "devDependencies": {
-    "@types/jest": "^26.0.5",
-    "@types/node": "^14.0.24",
-    "jest": "^26.1.0",
-    "jsii": "^1.9.0",
-    "jsii-pacmak": "^1.9.0",
-    "ts-jest": "^26.1.3"
-  },
-  "dependencies": {
-    "@aws-cdk/aws-events": "^1.53.0",
-    "@aws-cdk/aws-events-targets": "^1.53.0",
-    "@aws-cdk/aws-iam": "^1.53.0",
-    "@aws-cdk/aws-lambda": "^1.53.0",
-    "@aws-cdk/core": "^1.53.0",
-    "yarn": "^1.22.19"
-  },
-  "peerDependencies": {
-    "@aws-cdk/aws-events": "^1.53.0",
-    "@aws-cdk/aws-events-targets": "^1.53.0",
-    "@aws-cdk/aws-iam": "^1.53.0",
-    "@aws-cdk/aws-lambda": "^1.53.0",
-    "@aws-cdk/core": "^1.53.0"
-  },
-  "private": null
+    "@size-limit/preset-small-lib": "^8.0.1",
+    "husky": "^8.0.1",
+    "size-limit": "^8.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
 }
